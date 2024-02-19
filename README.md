@@ -1,2 +1,2 @@
 # community
-A repo for my community 
+A repo for my community website
