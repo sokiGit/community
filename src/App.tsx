@@ -8,6 +8,10 @@ function App() {
 
   return (
     <>
+      <h1>soki's community web-page</h1>
+      <h2>Using Vite, React and Vercel!</h2>
+      <code>Discord: @sokiuwu</code><br/>
+      <code>Server: discord.gg/uuAXCFfFhD</code>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
