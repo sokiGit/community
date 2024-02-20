@@ -115,11 +115,10 @@ main {
         &>menu>a {
             height: 3.5rem;
             font-size: 1.5rem;
-                justify-content: center;
-                &>li {
-                    justify-content: space-between;
-                    min-width: 75%;
-                }
+            justify-content: center;
+            &>li {
+                justify-content: space-between;
+                min-width: 75%;
             }
         }
     }
