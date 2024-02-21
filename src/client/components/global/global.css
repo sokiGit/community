@@ -26,11 +26,23 @@ header {
         display: flex;
         flex-flow: row;
         align-items: center;
-        gap: .5rem;
+        gap: .75rem;
+        font-size: 1.125rem;
+        font-weight: 400;
         &:hover {
             background-color: #0005;
             cursor: pointer;
         }
+        &>svg {
+            height: 50%;
+            width: auto;
+        }
+    }
+    &>#HeaderHamburger {
+        height: calc(100% - .5rem);
+        margin-inline-start: .25rem;
+        aspect-ratio: 1;
+        padding: 0;
     }
 }
 
@@ -77,22 +89,53 @@ footer {
     width: 100vw;
     min-height: 25vh;
     border-top-width: 1px;
-    position: absolute;
     z-index: 100;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    &>section {
+        padding-block: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+        width: calc(50% - 2rem);
+        gap: .5rem;
+        &>h3,&>p {
+            margin: 0;
+            width: 100%;
+        }
+        &>ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            &.FooterLimtations>li>svg {
+                color: #f66;
+            }
+            &.FooterPermissions>li>svg {
+                color: #6f6;
+            }
+            &>li {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                gap: .5rem;
+                font-size: .875rem;
+                &>b {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }
 
 main {
     width: 100vw;
     transition: width .2s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: absolute;
-    right: 0;
-    top: 0;
     box-sizing: border-box;
+    margin-left: auto;
     padding: 1rem;
 }
 
@@ -103,12 +146,34 @@ main {
     main {
         left: 0;
     }
+    header {
+        &>#HeaderProfile {
+            &>svg {
+                height: 65%;
+            }
+            &>p {
+                display: none;
+            }
+        }
+        &>#HeaderHamburger {
+            height: 100%;
+            margin: 0;
+            background: transparent;
+            border-radius: 0;
+            border: none;
+            &:hover {
+                background: #0005;
+            }
+        }
+    }
     nav {
         width: 100vw;
         height: fit-content;
         left: 0;
         transform: translateY(-100%);
         transition: .2s transform cubic-bezier(0.075, 0.82, 0.165, 1);
+        border-right-width: 0;
+        border-bottom-width: 1px;
         &[data-open="true"] {
             transform: translateY(0);
         }
@@ -116,10 +181,18 @@ main {
             height: 3.5rem;
             font-size: 1.5rem;
             justify-content: center;
+            width: 100%;
+            box-sizing: border-box;
             &>li {
                 justify-content: space-between;
                 min-width: 75%;
             }
+        }
+    }
+    footer {
+        &>section {
+            width: 100%;
+            padding-inline: 1rem;
         }
     }
 }

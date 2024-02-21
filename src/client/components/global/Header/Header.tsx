@@ -1,10 +1,11 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { VscAccount } from "react-icons/vsc";
 
+
 export default function Header() {
     return (
         <header id="GlobalHeader">
-            <button onClick={() => {
+            <button id="HeaderHamburger" onClick={() => {
                 const nav = document.getElementById("GlobalNavigation") as HTMLElement | null;
                 if (nav) {
                     const state = (nav.getAttribute("data-open") == "true") ? "false" : "true"
@@ -17,8 +18,10 @@ export default function Header() {
                 soki's community website
             </h2>
             <a id="HeaderProfile">
-                <VscAccount />
-                Log in
+                <VscAccount width={""}/>
+                <p>
+                    Log in
+                </p>
             </a>
         </header>
     );
