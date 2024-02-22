@@ -1,0 +1,16 @@
+code.CodeBlock {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: .25rem;
+    padding: .5rem;
+    border-radius: .75ch;
+    border: 1px solid #aaa6;
+    max-width: calc(100% - .5rem);
+    height: auto;
+    word-wrap: normal;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    &.CodeBlockStretch {
+        width: calc(100% - .5rem);
+    }
+}

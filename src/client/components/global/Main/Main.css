@@ -1,0 +1,21 @@
+main#MainContent {
+    width: 100vw;
+    transition: width .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-sizing: border-box;
+    margin-left: auto;
+    padding: 1rem;
+}
+
+#root:has(nav#GlobalNavigation[data-open="true"]) > main#MainContent {
+    width: calc(100vw - var(--navigation-width));
+}
+
+@media (orientation: portrait) {
+    main#MainContent {
+        left: 0;
+        margin: 0;
+    }
+    #root:has(nav#GlobalNavigation[data-open="true"]) > main#MainContent {
+        width: 100vw;
+    }
+}

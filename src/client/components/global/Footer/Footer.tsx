@@ -1,3 +1,4 @@
+import "./Footer.css"
 import { RxCross2, RxCheck, RxEnvelopeClosed, RxDiscordLogo } from "react-icons/rx";
 
 export default function Footer() {

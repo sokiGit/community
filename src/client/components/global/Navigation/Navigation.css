@@ -1,0 +1,89 @@
+:root {
+    --navigation-width: 20vw;
+}
+
+nav {
+    width: 20vw;
+    height: calc(100vh - var(--header-height));
+    position: fixed;
+    top: var(--header-height);
+    z-index: 99;
+    left: calc(-20vw - 1px);
+    border-right-width: 1px;
+    overflow-y: scroll;
+    transition: .2s left cubic-bezier(0.075, 0.82, 0.165, 1);
+    &[data-open="true"] {
+        left: 0;
+    }
+    &>menu {
+        padding: 0;
+        margin: 0;
+        &>a {
+            color: #fff;
+            padding: 1.25rem .75rem;
+            display: flex;
+            align-items: center;
+            height: 2rem;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            transition: color .2s,
+                        padding-left .2s ease;
+            &:hover {
+                background: #0002;
+                text-decoration: none;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                background: #535bf2;
+                width: 0;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transition: width .2s ease;
+            }
+            &.active {
+                &::before {
+                    width: .2ch;
+                }
+                padding-left: calc(.2ch + .75rem);
+                color: #535bf2;
+                background-color: #0002;
+                cursor: default;
+            }
+            &>li {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                list-style: none;
+            }
+        }
+    }
+}
+
+
+@media (orientation: portrait) {
+    nav {
+        width: 100vw;
+        height: fit-content;
+        left: 0;
+        transform: translateY(-100%);
+        transition: .2s transform cubic-bezier(0.075, 0.82, 0.165, 1);
+        border-right-width: 0;
+        border-bottom-width: 1px;
+        &[data-open="true"] {
+            transform: translateY(0);
+        }
+        &>menu>a {
+            height: 3.5rem;
+            font-size: 1.5rem;
+            justify-content: center;
+            &>li {
+                justify-content: space-between;
+                min-width: 75%;
+            }
+        }
+    }
+}
+

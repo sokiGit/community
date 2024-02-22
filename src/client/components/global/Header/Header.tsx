@@ -1,6 +1,7 @@
+import "./Header.css"
 import { RxHamburgerMenu } from "react-icons/rx";
 import { VscAccount } from "react-icons/vsc";
-
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -17,12 +18,12 @@ export default function Header() {
             <h2>
                 soki's community website
             </h2>
-            <a id="HeaderProfile">
+            <NavLink to="/login" id="HeaderProfile">
                 <VscAccount width={""}/>
                 <p>
                     Log in
                 </p>
-            </a>
+            </NavLink>
         </header>
     );
 }

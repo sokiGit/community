@@ -1,0 +1,64 @@
+:root {
+    --header-height: 3rem;
+}
+
+header {
+    width: 100vw;
+    height: var(--header-height);
+    border-bottom-width: 1px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    &>#HeaderProfile {
+        height: 100%;
+        padding-inline: 1rem;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: .75rem;
+        font-size: 1.125rem;
+        font-weight: 400;
+        &:hover {
+            background-color: #0005;
+            cursor: pointer;
+        }
+        &>svg {
+            height: 50%;
+            width: auto;
+        }
+    }
+    &>#HeaderHamburger {
+        height: calc(100% - .5rem);
+        margin-inline-start: .25rem;
+        aspect-ratio: 1;
+        padding: 0;
+    }
+}
+
+@media (orientation: portrait) {
+    header {
+        &>#HeaderProfile {
+            &>svg {
+                height: 65%;
+            }
+            &>p {
+                display: none;
+            }
+        }
+        &>#HeaderHamburger {
+            height: 100%;
+            margin: 0;
+            background: transparent;
+            border-radius: 0;
+            border: none;
+            &:hover {
+                background: #0005;
+            }
+        }
+    }
+}
