@@ -41,9 +41,9 @@ a {
 }
 
 body {
+    width: 100%;
     margin: 0;
     min-width: 320px;
-    width: 100vw;
     min-height: calc(100vh - var(--header-height));
     top: var(--header-height);
     left: 0;
