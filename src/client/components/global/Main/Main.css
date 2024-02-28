@@ -1,5 +1,5 @@
 main#MainContent {
-    width: 100vw;
+    width: 100%;
     transition: width .2s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-sizing: border-box;
     margin-left: auto;
