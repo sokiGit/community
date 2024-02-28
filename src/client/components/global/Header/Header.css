@@ -3,7 +3,7 @@
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     height: var(--header-height);
     border-bottom-width: 1px;
     position: fixed;
