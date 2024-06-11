@@ -14,6 +14,9 @@ export default function Home() {
 
     return (
         <Main>
+            <article>
+                Hey, come check out my little <a href="https://xss-ctf-sand.vercel.app/">XSS CTF</a>!
+            </article>
             <h1>Header one testing</h1>
             <h2>Using Vite, React and Vercel!</h2>
             <h3>This is a testing home page :3</h3>
